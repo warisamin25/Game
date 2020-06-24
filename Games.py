@@ -6,47 +6,47 @@ def main():
 
     while True:
         #input1 = input("> What's your current mood? (Happy/Angry/Stressed/Sad): " ).lower()
-        if input1 == "happy":
-            mood = Mood.Happy()
+        if set_mood == "happy":
+            setting = Mood.Happy()
             break
-        elif input1 == "angry":
-            mood = Mood.Angry()
+        elif mood == "angry":
+            setting = Mood.Angry()
             break
-        elif input1 == "stressed":
-            mood = Mood.Stressed()
+        elif mood == "stressed":
+            setting = Mood.Stressed()
             break
-        elif input1 == "sad":
-            mood = Mood.Sad()
+        elif mood == "sad":
+            setting = Mood.Sad()
             break
-        else:
-            input1 = print ("Invalid input! Please enter Happy, Angry, Stressed or Sad only!\n> ")
+        #else:
+            #nput1 = print ("Invalid input! Please enter Happy, Angry, Stressed or Sad only!\n> ")
         
 
 
         
-    def calc(mood):
-        return mood.stability * (mood.HMULT/mood.SMULT) * 100/randint(5, 10)
+    def calc(setting):
+        return setting.stability * (setting.HMULT/setting.SMULT) * 100/randint(5, 10)
             
     def RPG():
-        if input1 == "happy":
+        if mood == "happy":
             print ("100% stability achieved!")
         else:
             print(f"Your mental stability is: {round(calc(mood), 2)}%.")
         
     def FPS():
-        if input1 == "angry":
+        if mood == "angry":
             print ("100% stability achieved!")
         else:
             print(f"Your mental stability is: {round(calc(mood), 2)}%.")
             
     def PnC():
-        if input1 == "stressed":
+        if mood == "stressed":
             print ("100% stability achieved!")
         else:
             print(f"Your mental stability is: {round(calc(mood), 2)}%.")
             
     def Sim():
-        if input1 == "sad":
+        if mood == "sad":
             print ("100% stability achieved!")
         else:
             print(f"Your mental stability is: {round(calc(mood), 2)}%.")
@@ -55,20 +55,20 @@ def main():
 
     while True:
         #input2 = input("> What game do you want to play?\nRPG/FPS/PnC/Sim?: ").lower()
-        if input2 == "rpg":
+        if set_games == "rpg":
             RPG()
             break
-        elif input2 == "fps":
+        elif games == "fps":
             FPS()
             break
-        elif input2 == "pnc":
+        elif games == "pnc":
             PnC()
             break
-        elif input2 == "sim":
+        elif games == "sim":
             Sim()
             break
-        else:
-            input2 = print("Please choose from the option!")
+        #else:
+            #input2 = print("Please choose from the option!")
 
 
 main()
